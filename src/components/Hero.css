@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #585f7b;
+  color: #fff;
+  overflow-x: hidden;
+  transition: background 0.3s ease; /* Smooth transition */
+}
+
+/* Add moving background animation */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+/* Universal Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveBackground 60s linear infinite; /* Slow movement */
+  z-index: -1; /* Place behind all other content */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(28, 31, 34, 0.793); /* Semi-transparent dark */
+    padding: 15px 30px;
+    z-index: 1000;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between logo and right container */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Take full width */
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .nav-container {
+    display: flex; /* Flexbox for nav links and social icons */
+    align-items: center; /* Center items vertically */
+    margin-left: auto; /* Push items to the right */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex; /* Display links in a row */
+    gap: 20px; /* Space between links */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 12px; /* Add padding for space around text */
+    transition: color 0.s ease, transform 0.3s ease; /* Transition effect */
+  }
+  
+  .nav-links a:hover {
+    color: #ff7e5f; /* Bright orange hover effect */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    align-items: center; /* Center icons vertically */
+  }
+  
+  .icon {
+    font-size: 1.6rem;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition effect */
+  }
+  
+  .icon:hover {
+    color: #f39c12; /* Bright orange on hover */
+    transform: translateY(-3px); /* Move up on hover */
+  }
+  
+  
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  margin-top: 70px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+
+}
+/* Moon Effect */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #c5c6c7, #0b0c10);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+  animation: rotateMoon 30s infinite linear, moveMoon 10s linear infinite; /* Added movement */
+}
+
+@keyframes rotateMoon {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes moveMoon {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+/* Moon Effect */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #c5c6c7, #0b0c10);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+  animation: rotateMoon 30s infinite linear, moveMoon 10s linear infinite; /* Added movement */
+}
+
+@keyframes rotateMoon {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes moveMoon {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+.moon {
+    position: absolute; /* Position absolute for layering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by its own width and height */
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    background-size: contain; /* Ensure the moon fits within the element */
+    z-index: 1; /* Lower z-index than the text */
+  }
+  
+  .hero h1, .hero h2, .hero h3 {
+    position: relative; /* Ensure it is positioned normally */
+    z-index: 2; /* Higher z-index to be on top of the moon */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .hero h1 {
+    font-size: 4rem; /* Adjust size as needed */
+  }
+  
+  .hero h2 {
+    font-size: 2.6rem; /* Adjust size as needed */
+  }
+  
+  .hero h3 {
+    font-size: 1.3rem; /* Adjust size as needed */
+  }
+/* General Section Styles */
+section h1 {
+  background: transparent; /* Allow the moving background to show through */
+  color: #1b1d2c;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1b1d2c;
+}
+
+section h3 {
+  font-size: 1.1rem;
+  color: #1b1d2c;
+}
+
+/* Footer */
+footer {
+  background-color: #1f2833;
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+/* General Section Styling for Space Theme */
+body {
+    background-color: #0d0d0d; /* Dark background */
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); /* Stardust texture */
+    color: #fff; /* White text for contrast */
+    animation: spaceAnimation 100s linear infinite; /* Moving space effect */
+  }
+  
+  /* Add a slow-moving background for space effect */
+  @keyframes spaceAnimation {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 2000px 2000px;
+    }
+  }
+  .resume-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #143145c5; /* Blue color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2; /* Make sure it's on top of the moon */
+  position: relative; /* Relative to ensure it stays within the flow of the content */
+}  
+  .resume-button:hover {
+    background-color: #25211c; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 100px 20px;
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensure it's above the background */
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff7e5f; /* Accent color */
+    text-shadow: 0px 0px 8px rgba(255, 126, 95, 0.8); /* Glowing text effect */
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+    color: #ddd; /* Light gray text */
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2); /* Subtle glowing effect */
+  }
+  
+  /* About Cards */
+  .about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .about-card {
+    background-color: rgba(26, 26, 26, 0.8); /* Transparent dark background */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+  }
+  
+  .about-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ff7e5f; /* Icon color matching the accent */
+    transition: transform 0.3s ease;
+  }
+  
+  .about-card:hover i {
+    transform: rotate(20deg); /* Fun icon animation on hover */
+  }
+  
+  .about-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .about-card p {
+    font-size: 1rem;
+    color: #bbb; /* Lighter gray text */
+  }
+  
+  .about-card:hover {
+    background-color: rgba(41, 41, 41, 0.8); /* Darker on hover */
+    transform: translateY(-10px);
+  }
+  
+  /* Floating Moon Animation */
+  .moon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ccc; /* Light gray color for the moon */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Glow effect */
+    animation: moonFloat 8s ease-in-out infinite; /* Floating moon effect */
+  }
+  
+  @keyframes moonFloat {
+    0%, 100% {
+      transform: translate(-50%, -10px);
+    }
+    50% {
+      transform: translate(-50%, 10px);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-cards {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+/* TechStack Section */
+.techstack {
+    padding: 50px;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); /* Space-themed texture */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Moving stars effect with same speed and opacity as About Me */
+  .techstack::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    opacity: 0.2; /* Same opacity as About Me */
+    animation: moveStars 40s linear infinite; /* Same speed as About Me */
+    z-index: 1;
+  }
+  
+  @keyframes moveStars {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 3000px 3000px; /* Same slow movement */
+    }
+  }
+  
+  .techstack-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2; /* Keep content above background animation */
+  }
+  
+  .tech-item {
+    width: 150px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tech-item img {
+    width: 80px;
+    height: auto;
+  }
+  
+  .tech-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffeaa7; /* Soft yellow text */
+  }
+  
+  .tech-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  }
+/* Projects Section */
+.projects {
+    padding: 50px;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); /* Space-themed texture */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Moving stars effect */
+  .projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    opacity: 0.2; /* Adjust opacity */
+    animation: moveStars 40s linear infinite; /* Adjust speed */
+    z-index: 1;
+  }
+  
+  @keyframes moveStars {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 3000px 3000px; /* Slow movement */
+    }
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2; /* Keep content above background animation */
+  }
+  
+  .project-item {
+    width: 250px; /* Adjust width as needed */
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .projects h2 {
+    font-family: 'YourChosenFont', sans-serif; /* Use the same font family */
+    font-size: 2.5rem; /* Adjust size if needed */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Add some space below */
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff7e5f; /* Accent color */
+    text-shadow: 0px 0px 8px rgba(255, 126, 95, 0.8); /* Glowing text effect */
+} 
+  .project-item h3 {
+    font-size: 1.5rem;
+    color: #ffeaa7; /* Soft yellow text */
+  }
+  
+  .project-item p {
+    font-size: 1rem;
+    color: #ddd; /* Light gray text */
+  }
+  
+  .project-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db; /* Blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project-item a:hover {
+    color: #1abc9c; /* Change color on hover */
+  }
+  
+  .project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Experience Section */
+.experience {
+    padding: 50px;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); /* Space-themed texture */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Moving stars effect */
+  .experience::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    opacity: 0.3;
+    animation: moveStars 40s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes moveStars {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 3000px 3000px;
+    }
+  }
+  
+  .experience-title {
+    font-family: 'YourChosenFont', sans-serif;
+    font-size: 2.5rem;
+    color: #d5a70e;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(161, 114, 114, 0.5);
+    
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+    z-index: 2;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 50px; /* Reduced space to bring closer to dates */
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9rem;
+    color: #ce961ced;
+    font-weight: bold;
+  }
+  
+  .timeline-content {
+    background-color: rgba(44, 45, 68, 0.423);
+    border-radius: 8px; /* Slightly reduced border radius */
+    padding: 10px 15px; /* Reduced padding for smaller box size */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    width: 80%; /* Reduced width for better alignment */
+    margin-left: 120px;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-content h3 {
+    margin: 0;
+    font-size: 1.3rem; /* Reduced size */
+    color: #3498db;
+  }
+  
+  .timeline-content p {
+    margin-top: 8px; /* Reduced spacing */
+    color: #666;
+  }
+  
+  /* Hover effect for timeline items */
+  .timeline-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .timeline-content:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow for hover */
+  }
+.experience h2 {
+        font-family: 'YourChosenFont', sans-serif; /* Use the same font family */
+        font-size: 2.5rem; /* Adjust size if needed */
+        text-align: center; /* Center the title */
+        margin-bottom: 20px; /* Add some space below */
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #ff7e5f; /* Accent color */
+        text-shadow: 0px 0px 8px rgba(255, 126, 95, 0.8); /* Glowing text effect */
+}
+.experience h3{
+  color: #3498db;
+  text-shadow: #0d0d0d;
+}
+
+/* Certificates Section */
+.certificates {
+  padding: 50px;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); /* Space-themed texture */
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.certificates h2 {
+  font-family: 'YourFont', sans-serif; /* Same font as About and TechStack sections */
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffeaa7; /* Soft yellow color for the title */
+}
+
+.certificates-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2; /* Keep content above background animation */
+}
+
+.certificate-item {
+  width: 150px;
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for certificates */
+}
+
+.certificate-item p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffeaa7; /* Soft yellow text */
+}
+
+.certificate-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Glow effect on hover */
+}
+.certificates h2 {
+  font-family: 'YourChosenFont', sans-serif; /* Use the same font family */
+  font-size: 2.5rem; /* Adjust size if needed */
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Add some space below */
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff7e5f; /* Accent color */
+  text-shadow: 0px 0px 8px rgba(255, 126, 95, 0.8); /* Glowing text effect */
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); /* Space-themed texture */
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact h2 {
+  font-family: 'YourFont', sans-serif; /* Same font as About, TechStack, and Certificates sections */
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffeaa7; /* Soft yellow color for the title */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2; /* Keep content above background animation */
+}
+
+.contact-item {
+  width: 150px;
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item img {
+  width: 50px;
+  height: auto;
+}
+
+.contact-item p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffeaa7; /* Soft yellow text */
+}
+
+.contact-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Glow effect on hover */
+}
+
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact h2 {
+  font-family: 'YourChosenFont', sans-serif; /* Use the same font family */
+  font-size: 2.5rem; /* Adjust size if needed */
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Add some space below */
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff7e5f; /* Accent color */
+  text-shadow: 0px 0px 8px rgba(255, 126, 95, 0.8); /* Glowing text effect */
+}
+.footer {
+  background-color: #1a1a1ad4; /* Dark background */
+  color: #e2a494; /* White text color */
+  text-shadow: 0px 0px 8px rgba(255, 126, 95, 0.8); /* Glowing text effect */
+  text-align: center; /* Centered text */
+  padding: 10px 0; /* Padding for top and bottom */
+  position: relative; /* Position relative for layout */
+  bottom: 0; /* Stick to bottom */
+  width: 100%; /* Full width */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 0.7rem; /* Font size */
+}
