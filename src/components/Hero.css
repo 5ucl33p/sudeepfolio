@@ -265,6 +265,19 @@ body {
       background-position: 2000px 2000px;
     }
   }
+  .social-icons{
+    margin-top: 20px;
+    font-size: 4rem;
+    color: #07102e;
+    height: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2; /* Make sure it's on top of the moon */
+  position:relative ; /* Relative to ensure it stays within the flow of the content */
+  margin-left: 195px;
+  font-size: 5.5rem;
+
+  }
   .resume-button {
     padding: 10px 20px;
     margin-top: 20px;
@@ -702,7 +715,9 @@ body {
 .certificate-item p {
   margin-top: 10px;
   font-size: 1.2rem;
-  color: #ffeaa7; /* Soft yellow text */
+  color: #ffeaa7; 
+  text-decoration:underline;
+  
 }
 
 .certificate-item:hover {

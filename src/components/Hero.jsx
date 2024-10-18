@@ -17,14 +17,6 @@ const Hero = () => {
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
       </ul>
-      <div className="social-icons">
-        <a href="https://www.linkedin.com/in/sudeep-kushwaha-315b94220" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="icon linkedin" />
-        </a>
-        <a href="https://github.com/5ucl33p" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="icon github" />
-        </a>
-      </div>
     </div>
   </div>
 </nav>
@@ -36,9 +28,37 @@ const Hero = () => {
     <h3 className="hero-sub"><i>A FRONT-END DEVELOPER</i></h3>
 
     {/* Resume Button */}
-      <a href="/resumeog.pdf" target="_blank" rel="noopener noreferrer">
-        <button className="resume-button">RESUME 🚀</button>
-      </a>
+    <a 
+  href={require('../assests/resume.pdf')} 
+  download="sudeep_Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={(e) => {
+    e.preventDefault();  // Prevent default anchor behavior
+    // Trigger download
+    // const link = document.createElement('a');
+    // link.href = require('../assests/resume.pdf');
+    // link.download = 'sudeep_Resume.pdf';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+    
+    // Open in new tab
+    window.open(require('../assests/resume.pdf'), '_blank');
+  }
+  }
+>
+  <button className="resume-button">RESUME 🚀</button>
+</a>
+<div className="social-icons">
+        <a href="https://www.linkedin.com/in/sudeep-kushwaha-315b94220" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="icon linkedin" />
+        </a>
+        <a href="https://github.com/5ucl33p" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="icon github" />
+        </a>
+      </div>
+
   </div>
 </section>
       <section id="about" className="about-section">
