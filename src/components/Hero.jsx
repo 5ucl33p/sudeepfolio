@@ -130,11 +130,11 @@ const Hero = () => {
       <p>A web application that allows users to input multiple options and randomly selects one.</p>
       <a href="https://link-to-your-random-choice-picker.com" target="_blank" rel="noopener noreferrer">View Project</a>
     </div>
-    <div className="project-item">
+    {/* <div className="project-item">
       <h3>MEWZIC</h3>
       <p>A web application that mimics Spotify's UI and functionality using React.</p>
       <a href="https://link-to-your-spotify-clone.com" target="_blank" rel="noopener noreferrer">View Project</a>
-    </div>
+    </div> */}
     <div className="project-item">
       <h3>CALCULATOR</h3>
       <p>Description of your third project.</p>
@@ -144,6 +144,11 @@ const Hero = () => {
       <h3>TO-DO-LIST</h3>
       <p>Description of your fourth project.</p>
       <a href="https://5ucl33p.github.io/TO-DO-LIST/" target="_blank" rel="noopener noreferrer">View Project</a>
+    </div>
+    <div className="project-item">
+      <h3>MODELING SITE</h3>
+      <p>An interface designed with button functionalities for a modeling site using Tailwind CSS majorly</p>
+      <a href="https://5ucl33p.github.io/kushwahamodels/" target="_blank" rel="noopener noreferrer">View Project</a>
     </div>
   </div>
 </section>

@@ -266,22 +266,24 @@ body {
     }
   }
   .social-icons{
-    margin-top: 20px;
-    font-size: 4rem;
+    margin-top: 40px;
+    font-size: 84px;
+    margin-left: 25px;
     color: #07102e;
-    height: 5px;
+    height: 36px;
+    width: 36px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 2; /* Make sure it's on top of the moon */
   position:relative ; /* Relative to ensure it stays within the flow of the content */
   margin-left: 195px;
-  font-size: 5.5rem;
+  font-size: 1rem;
 
   }
   .resume-button {
     padding: 10px 20px;
     margin-top: 20px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fff;
     background-color: #143145c5; /* Blue color */
     border: none;
