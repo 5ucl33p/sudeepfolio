@@ -125,10 +125,15 @@ const Hero = () => {
 <section className="projects" id="projects">
   <h2>Projects</h2>
   <div className="projects-container">
-    <div className="project-item">
+    {/* <div className="project-item">
       <h3>RANDOM CHOICE PICKER</h3>
       <p>A web application that allows users to input multiple options and randomly selects one.</p>
       <a href="https://link-to-your-random-choice-picker.com" target="_blank" rel="noopener noreferrer">View Project</a>
+    </div> */}
+    <div className="project-item">
+      <h3>Expense Tracker</h3>
+      <p>A web application that allows users to input multiple options and randomly selects one.</p>
+      <a href="https://5ucl33p.github.io/expensetracker/" target="_blank" rel="noopener noreferrer">View Project</a>
     </div>
     {/* <div className="project-item">
       <h3>MEWZIC</h3>
@@ -137,12 +142,12 @@ const Hero = () => {
     </div> */}
     <div className="project-item">
       <h3>CALCULATOR</h3>
-      <p>Description of your third project.</p>
+      <p>This calculator is a simple, interactive tool built with HTML, CSS, and JavaScript, allowing users to perform basic arithmetic operations seamlessly.</p>
       <a href="https://5ucl33p.github.io/CALCULATOR-JS/" target="_blank" rel="noopener noreferrer">View Project</a>
     </div>
     <div className="project-item">
       <h3>TO-DO-LIST</h3>
-      <p>Description of your fourth project.</p>
+      <p>This to-do list application, built with HTML, CSS, and React, allows users to easily add, manage, and delete tasks, enhancing productivity.</p>
       <a href="https://5ucl33p.github.io/TO-DO-LIST/" target="_blank" rel="noopener noreferrer">View Project</a>
     </div>
     <div className="project-item">
