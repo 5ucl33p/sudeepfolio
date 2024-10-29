@@ -17,7 +17,7 @@ const Hero = () => {
         <a href="#experience">Experience</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
-      </ul>
+      </ul>z
     </div>
   </div>
 </nav>
