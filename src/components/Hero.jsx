@@ -2,6 +2,7 @@ import React from 'react';
 import './Hero.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
+
 const Hero = () => {
   return (
     <>
@@ -125,11 +126,17 @@ const Hero = () => {
 <section className="projects" id="projects">
   <h2>Projects</h2>
   <div className="projects-container">
-    {/* <div className="project-item">
-      <h3>RANDOM CHOICE PICKER</h3>
-      <p>A web application that allows users to input multiple options and randomly selects one.</p>
-      <a href="https://link-to-your-random-choice-picker.com" target="_blank" rel="noopener noreferrer">View Project</a>
-    </div> */}
+  <div className="project-item">
+  <img src="./prrodis/rcp.png" alt="Project Preview" style={{ width: '100%', height: 'auto' }} />
+  
+  <h3>RANDOM CHOICE PICKER</h3>
+  <p>A web application that allows users to input multiple options and randomly selects one.</p>
+  
+  <a href="https://5ucl33p.github.io/randomchoicepicker/" target="_blank" rel="noopener noreferrer">
+    View Project
+  </a>
+</div>
+
     <div className="project-item">
       <h3>Expense Tracker</h3>
       <p>A web application that allows users to input multiple options and randomly selects one.</p>
@@ -157,8 +164,6 @@ const Hero = () => {
     </div>
   </div>
 </section>
-
-
       <section className="experience" id="experience">
   <h2>Experience</h2>
   <div className="timeline">
