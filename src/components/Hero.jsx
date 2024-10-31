@@ -17,7 +17,7 @@ const Hero = () => {
         <a href="#experience">Experience</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
-      </ul>z
+      </ul>
     </div>
   </div>
 </nav>
@@ -126,16 +126,11 @@ const Hero = () => {
 <section className="projects" id="projects">
   <h2>Projects</h2>
   <div className="projects-container">
-  <div className="project-item">
-  <img src="./prrodis/rcp.png" alt="Project Preview" style={{ width: '100%', height: 'auto' }} />
-  
-  <h3>RANDOM CHOICE PICKER</h3>
-  <p>A web application that allows users to input multiple options and randomly selects one.</p>
-  
-  <a href="https://5ucl33p.github.io/randomchoicepicker/" target="_blank" rel="noopener noreferrer">
-    View Project
-  </a>
-</div>
+    <div className="project-item">
+      <h3>Random Choice Picker</h3>
+      <p>A web application that allows users to input multiple options and randomly selects one.</p>
+      <a href="https://5ucl33p.github.io/randomchoicepicker/" target="_blank" rel="noopener noreferrer">View Project</a>
+    </div>
 
     <div className="project-item">
       <h3>Expense Tracker</h3>
@@ -148,7 +143,7 @@ const Hero = () => {
       <a href="https://link-to-your-spotify-clone.com" target="_blank" rel="noopener noreferrer">View Project</a>
     </div> */}
     <div className="project-item">
-      <h3>CALCULATOR</h3>
+      <h3>Calculator</h3>
       <p>This calculator is a simple, interactive tool built with HTML, CSS, and JavaScript, allowing users to perform basic arithmetic operations seamlessly.</p>
       <a href="https://5ucl33p.github.io/CALCULATOR-JS/" target="_blank" rel="noopener noreferrer">View Project</a>
     </div>
