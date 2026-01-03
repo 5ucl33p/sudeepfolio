@@ -37,77 +37,131 @@ body::before {
   z-index: -1; /* Place behind all other content */
 }
 
+/* Navbar Container */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(28, 31, 34, 0.793); /* Semi-transparent dark */
-    padding: 15px 30px;
-    z-index: 1000;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space between logo and right container */
-    align-items: center; /* Center items vertically */
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between; /* Space between logo and nav links */
-    align-items: center; /* Center items vertically */
-    width: 100%; /* Take full width */
-  }
-  
-  .logo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(28, 31, 34, 0.793); /* Semi-transparent dark */
+  padding: 15px 30px;
+  z-index: 1000;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between logo and right container */
+  align-items: center; /* Center items vertically */
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Navigation Links and Social Icons */
+.nav-container {
+  display: flex; /* Flexbox for nav links and social icons */
+  align-items: center; /* Center items vertically */
+  margin-left: auto; /* Push items to the right */
+}
+
+/* Nav Links (Desktop) */
+.nav-links {
+  list-style: none;
+  display: flex; /* Display links in a row */
+  gap: 20px; /* Space between links */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 8px 12px; /* Add padding for space around text */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition effect */
+}
+
+.nav-links a:hover {
+  color: #ff7e5f; /* Bright orange hover effect */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px; /* Space between icons */
+  align-items: center; /* Center icons vertically */
+}
+
+.icon {
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition effect */
+}
+
+.icon:hover {
+  color: #f39c12; /* Bright orange on hover */
+  transform: translateY(-3px); /* Move up on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Hamburger Menu Button */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
     font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
+    color: #fff;
   }
-  
-  .nav-container {
-    display: flex; /* Flexbox for nav links and social icons */
-    align-items: center; /* Center items vertically */
-    margin-left: auto; /* Push items to the right */
+
+  .menu-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    display: block;
+    position: relative;
   }
-  
+
+  .menu-toggle .hamburger::before,
+  .menu-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle .hamburger::before {
+    top: -8px;
+  }
+
+  .menu-toggle .hamburger::after {
+    top: 8px;
+  }
+
+  /* Hide nav links by default on mobile */
   .nav-links {
-    list-style: none;
-    display: flex; /* Display links in a row */
-    gap: 20px; /* Space between links */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    display: none; /* Hide on mobile */
+    flex-direction: column; /* Stack links vertically */
+    background: rgba(28, 31, 34, 0.95);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    gap: 10px;
+    align-items: center;
   }
-  
-  .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 8px 12px; /* Add padding for space around text */
-    transition: color 0.s ease, transform 0.3s ease; /* Transition effect */
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
   }
-  
-  .nav-links a:hover {
-    color: #ff7e5f; /* Bright orange hover effect */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  
-  /* Social Icons */
-  .social-icons {
-    display: flex;
-    gap: 15px; /* Space between icons */
-    align-items: center; /* Center icons vertically */
-  }
-  
-  .icon {
-    font-size: 1.6rem;
-    color: #ffffff;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transition effect */
-  }
-  
-  .icon:hover {
-    color: #f39c12; /* Bright orange on hover */
-    transform: translateY(-3px); /* Move up on hover */
-  }
-  
+}
+
   
 /* Hero Section */
 .hero {

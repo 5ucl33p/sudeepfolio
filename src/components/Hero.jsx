@@ -26,7 +26,7 @@ const Hero = () => {
     <h1 className="hero-title">HEY!</h1>
     <br />
     <h2 className="hero-subtitle">I'M SUDEEP KUSHWAHA</h2>
-    <h3 className="hero-sub"><i>A FRONT-END DEVELOPER</i></h3>
+    <h3 className="hero-sub"><i> A Data Analyst</i></h3>
 
     {/* Resume Button */}
     <a 
@@ -66,31 +66,34 @@ const Hero = () => {
   <div className="about-container">
     <h2 className="section-title">About Me</h2>
     <p className="about-description">
-      I am a passionate web developer with expertise in HTML, CSS, JavaScript, and React. I love building interactive and user-friendly applications and am always eager to learn new technologies.
+      I’m <strong>Sudeep Kushwaha</strong>, a passionate <em>Data Analyst</em> and <em>Front-End Developer</em> with expertise in <span style={{ color: "#1E90FF" }}>SQL, Excel, Power BI, Python, and React</span>. I turn raw data into actionable insights and build interactive dashboards that help businesses make smarter decisions.<br></br><br></br>
+
+I’ve worked on front-end projects at Yugox, including a car buying/selling website, and learned API integration during my internship there. I started my journey as a <strong>Web Developer Intern at JOVAC</strong>, creating a Spotify clone with React. Since <strong>January 2025</strong>, I’ve been an <strong>Associate Analyst at GlobalLogic</strong>, developing dashboards and reports to drive data-driven business decisions.<br></br><br></br>
+
+Passionate about problem-solving and creating meaningful solutions, I thrive at the intersection of data and technology.
+<br></br>
     </p>
-    <div className="about-cards">
-      <div className="about-card">
-        <i className="fas fa-code"></i>
-        <h3>Development</h3>
-        <p>Skilled in front-end development with a focus on responsive and accessible design.</p>
-      </div>
-      <div className="about-card">
-        <i className="fas fa-lightbulb"></i>
-        <h3>Creative Solutions</h3>
-        <p>I enjoy solving complex problems and finding creative solutions through code.</p>
-      </div>
-      <div className="about-card">
-        <i className="fas fa-rocket"></i>
-        <h3>Innovation</h3>
-        <p>Constantly exploring new tools and frameworks to stay ahead in the tech world.</p>
-      </div>
-    </div>
   </div>
 </section>
 
 <section id="techstack" className="techstack">
   <h2 className="section-title">Tech Stack</h2>
   <div className="techstack-container">
+    {/* Priority Skills */}
+    <div className="tech-item">
+      <img src="https://img.icons8.com/color/48/microsoft-excel-2019.png" alt="MS Excel" />
+      <p>MS Excel</p>
+    </div>
+    <div className="tech-item">
+      <img src="https://img.icons8.com/fluency/48/sql.png" alt="SQL" />
+      <p>SQL</p>
+    </div>
+    <div className="tech-item">
+      <img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI" />
+      <p>Power BI</p>
+    </div>
+
+    {/* Other Skills */}
     <div className="tech-item">
       <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />
       <p>HTML</p>
@@ -112,16 +115,16 @@ const Hero = () => {
       <p>Bootstrap</p>
     </div>
     <div className="tech-item">
-  <img src="https://img.icons8.com/color/48/tailwindcss.png" alt="Tailwind CSS" />
-  <p>Tailwind CSS</p>
-</div>
-<div className="tech-item">
-  <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="Git" />
-  <p>Git</p>
-
-</div>
+      <img src="https://img.icons8.com/color/48/tailwindcss.png" alt="Tailwind CSS" />
+      <p>Tailwind CSS</p>
+    </div>
+    <div className="tech-item">
+      <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="Git" />
+      <p>Git</p>
+    </div>
   </div>
 </section>
+
 
 <section className="projects" id="projects">
   <h2>Projects</h2>
@@ -159,30 +162,32 @@ const Hero = () => {
     </div>
   </div>
 </section>
-      <section className="experience" id="experience">
+      
+      
+<section className="experience" id="experience">
   <h2>Experience</h2>
   <div className="timeline">
-  <div className="timeline-item">
-      <div className="timeline-date">AUG 2024 - Present</div>
+    <div className="timeline-item">
+      <div className="timeline-date">JAN 2025 - Present</div>
       <div className="timeline-content">
-        <h3>FRONT-END DEVELOPER </h3>
-        <h4>at YUGOX,AGRA</h4>
-        <p>Working on front-end projects using React such as frontend for a car buying/selling website</p>
+        <h3>Associate Analyst</h3>
+        <h4>at GlobalLogic, Gurugram</h4>
+        <p>Developing dashboards and reports, performing data analysis, and providing actionable insights to support business decisions.</p>
       </div>
     </div>
     <div className="timeline-item">
-      <div className="timeline-date">MAY 2024 - JULY 2024</div>
+      <div className="timeline-date">AUG 2024 - DEC 2024</div>
       <div className="timeline-content">
-        <h3>FRONT-END DEVELOPER (INTERN)</h3>
-        <h4>at YUGOX,AGRA</h4>
-        <p>Working on front-end projects and learnt integrating APIs via Postman.</p>
+        <h3>Data Analyst Intern</h3>
+        <h4>at YUGOX, AGRA</h4>
+        <p>Working on front-end projects using React such as frontend for a car buying/selling website.</p>
       </div>
     </div>
-      <div className="timeline-item">
+    <div className="timeline-item">
       <div className="timeline-date">JUNE 2022 - JULY 2022</div>
       <div className="timeline-content">
-        <h3>Web Developer Intern at JOVAC</h3>
-        <h4>AT JOVAC,MATHURA</h4>
+        <h3> Intern at JOVAC</h3>
+        <h4>AT JOVAC, MATHURA</h4>
         <p>Developed a Spotify clone using HTML, CSS, JavaScript, and React.</p>
       </div>
     </div>
