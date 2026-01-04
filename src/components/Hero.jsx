@@ -30,8 +30,8 @@ const Hero = () => {
 
     {/* Resume Button */}
     <a 
-  href={require('../assests/resume.pdf')} 
-  download="sudeep_Resume.pdf"
+  href={require('../assests/resume2026.pdf')} 
+  download="resume2026.pdf"
   target="_blank"
   rel="noopener noreferrer"
   onClick={(e) => {
@@ -45,7 +45,7 @@ const Hero = () => {
     // document.body.removeChild(link);
     
     // Open in new tab
-    window.open(require('../assests/resume.pdf'), '_blank');
+    window.open(require('../assests/resume2026.pdf'), '_blank');
   }
   }
 >
@@ -68,7 +68,9 @@ const Hero = () => {
     <p className="about-description">
       I’m <strong>Sudeep Kushwaha</strong>, a passionate <em>Data Analyst</em> and <em>Front-End Developer</em> with expertise in <span style={{ color: "#1E90FF" }}>SQL, Excel, Power BI, Python, and React</span>. I turn raw data into actionable insights and build interactive dashboards that help businesses make smarter decisions.<br></br><br></br>
 
-I’ve worked on front-end projects at Yugox, including a car buying/selling website, and learned API integration during my internship there. I started my journey as a <strong>Web Developer Intern at JOVAC</strong>, creating a Spotify clone with React. Since <strong>January 2025</strong>, I’ve been an <strong>Associate Analyst at GlobalLogic</strong>, developing dashboards and reports to drive data-driven business decisions.<br></br><br></br>
+I’ve worked on front-end projects at Yugox, including a car buying/selling website, and learned API integration during my internship there. I started my journey as a <strong>Web Developer Intern at JOVAC</strong>, creating a Spotify clone with React.<br></br><br></br> 
+
+Since January 2025, I have been working as an <strong>Associate Analyst</strong> at GlobalLogic, where I support data-driven business decisions by creating and maintaining dashboards and reports. My role involves analyzing performance and quality metrics, tracking key trends, and presenting insights that help stakeholders monitor productivity and improve operational efficiency. I regularly work with structured datasets, ensure data accuracy, and collaborate with team members to translate business requirements into meaningful analytical outputs.<br></br><br></br>
 
 Passionate about problem-solving and creating meaningful solutions, I thrive at the intersection of data and technology.
 <br></br>
