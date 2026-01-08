@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sudeepfolio/static/css/main.0c59629d.css",
-    "main.js": "/sudeepfolio/static/js/main.1cff7668.js",
+    "main.js": "/sudeepfolio/static/js/main.9cbb59d4.js",
     "static/media/resume2026.pdf": "/sudeepfolio/static/media/resume2026.77e1bc3254a0b4edbca2.pdf",
     "index.html": "/sudeepfolio/index.html",
     "main.0c59629d.css.map": "/sudeepfolio/static/css/main.0c59629d.css.map",
-    "main.1cff7668.js.map": "/sudeepfolio/static/js/main.1cff7668.js.map"
+    "main.9cbb59d4.js.map": "/sudeepfolio/static/js/main.9cbb59d4.js.map"
   },
   "entrypoints": [
     "static/css/main.0c59629d.css",
-    "static/js/main.1cff7668.js"
+    "static/js/main.9cbb59d4.js"
   ]
 }
